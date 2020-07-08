@@ -13,7 +13,7 @@ import { SEO, Stars } from "."
 
 export default function ProductDetail({
   unit_amount,
-  sku: id,
+  id,
   product: { name, metadata },
 }) {
   const formatedPrice = priceFormat(unit_amount)
@@ -22,7 +22,7 @@ export default function ProductDetail({
   const { addToCart } = useContext(CartContext)
 
   const handleSubmit = () => {
-    addToCart({ unit_amount, sku: id, name, metadata, quantity: qty })
+    addToCart({ unit_amount, id, name, metadata, quantity: qty })
   }
 
   return (
