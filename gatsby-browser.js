@@ -12,6 +12,6 @@ const { GlobalStyles } = require("./src/styles")
 exports.wrapRootElement = ({ element }) => (
   <>
     <GlobalStyles />
-    <Layout>{element}</Layout>)
+    <Layout>{element}</Layout>
   </>
 )

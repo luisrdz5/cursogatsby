@@ -20,7 +20,7 @@ export default function Products({ products }) {
               />
               <p>{node.node.product.name}</p>
               <small>USD {price}</small>
-              <Link to={`/{node.id}`}>Comprar ahora</Link>
+              <Link to={`/${node.node.id}`}>Comprar ahora</Link>
             </article>
           )
         })}
