@@ -24,7 +24,6 @@ export default function Cart() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(cart.map(({ id, quantity }) => ({ price: id, quantity })))
 
     const { error } = await stripe.redirectToCheckout({
       lineItems: cart.map(({ id, quantity }) => ({ price: id, quantity })),
@@ -36,7 +35,6 @@ export default function Cart() {
       throw error
     }
   }
-  console.log(`va el process env ${JSON.stringify(process.env)} `)
   return (
     <StyledCart>
       <h2>Carrito de compras</h2>

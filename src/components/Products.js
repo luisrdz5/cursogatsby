@@ -4,13 +4,11 @@ import formatPrice from "../utils/priceFormat"
 import { StyledProducts } from "../styles/components"
 
 export default function Products({ products }) {
-  //console.log(products)
   return (
     <StyledProducts>
       <h2>Productos</h2>
       <section>
         {products.map((node) => {
-          console.log(node.node)
           const price = formatPrice(node.node.unit_amount)
           return (
             <article key={node.node.id}>
