@@ -35,7 +35,7 @@ export default function Cart() {
       throw error
     }
   }
-  console.log(`process env es: ${process.env}`)
+  console.log(`process env es: ${JSON.stringify(process.env)}`)
   return (
     <StyledCart>
       <h2>Carrito de compras</h2>
